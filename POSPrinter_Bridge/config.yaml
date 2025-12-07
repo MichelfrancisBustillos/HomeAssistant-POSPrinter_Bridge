@@ -1,8 +1,8 @@
 name: POS Printer Bridge
-version: v0.0.4
+version: v0.0.5
 slug: pos_printer_bridge
 description: API Bridge for ESC/POS Receipt Printers
-url: https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/tree/HomeAssistant
+url: https://github.com/MichelfrancisBustillos/HomeAssistant-POSPrinter_Bridge
 init: false
 webui: http://[HOST]:[PORT:8000]/docs
 host_network: true
