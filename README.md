@@ -1,68 +1,10 @@
 # POS Printer Bridge
 
-[![PyLint](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/python_linting.yml/badge.svg)](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/python_linting.yml) [![Docker Pre-Release Test](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/docker_pre-release_test.yml/badge.svg)](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/docker_pre-release_test.yml) [![Docker Post-Release Test](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/docker_post-release_test.yml/badge.svg)](https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/actions/workflows/docker_post-release_test.yml)
-
 A small Python HTTP API to send text, QR codes, barcodes, and images to an ESC/POS-compatible receipt printer on the network.
 
 This project exposes a minimal FastAPI service with endpoints for printing plain text and QR codes. It uses `python-escpos` (the `escpos` package) to communicate with network printers.
 
 ## Quick Start
-
-### Prerequisites
-
-1. Ensure you have Python 3.8+ installed (if using local setup) or Docker installed (if using Docker).
-2. Have access to an ESC/POS-compatible receipt printer (network, serial, or USB).
-3. Create a `.env` file in the project root with the correct environment variables (see below).
-   1. `PRINTER_TYPE` - Type of printer connection: `network`, `serial`, `usb`, or `dummy`.
-   2. For `network` printers, set `PRINTER_IP` to the printer's IP address.
-   3. For `serial` printers, set `PRINTER_PORT` to the serial port (e.g., `/dev/tty0` on Linux or `COM1` on Windows).
-   4. For `usb` printers, set `PRINTER_VENDOR_ID` and `PRINTER_PRODUCT_ID` to the USB device path.
-        - Find these IDs using `lsusb` on Linux or `usb-devices` command.
-
-        ```bash
-        lsusb
-            Bus 002 Device 001: ID 04b8:0202 Epson ...
-        # Here, `04b8` is the Vendor ID and `0202` is the Product ID.
-        lsusb -vvv -d xxxx:xxxx | grep iInterface
-            iInterface 1
-        # The interface number ('1') is also needed for some printers.
-        ```
-
-### Local Setup
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/MichelfrancisBustillos/POS_Printer_Bridge.git
-    cd POS_Printer_Bridge
-    ```
-
-2. Create and activate a virtual environment (optional but recommended):
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run the server:
-
-    ```bash
-    python src/main.py
-    ```
-
-### Docker Build Setup
-
-1. Build and run the Docker container using Docker Compose:
-
-    ```bash
-    docker compose up --build -d
-    ```
 
 ## Environment variables
 
