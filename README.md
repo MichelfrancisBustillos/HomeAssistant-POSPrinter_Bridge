@@ -6,6 +6,15 @@ This project exposes a minimal FastAPI service with endpoints for printing plain
 
 ## Quick Start
 
+1. Click the button below to add this repository to your Home Assistant instance.
+
+  [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FMichelfrancisBustillos%2FHomeAssistant-POSPrinter_Bridge)
+
+2. Install the "POS Printer Bridge" add-on from the Add-On Store.
+3. Configure the add-on with your printer settings.
+4. Start the add-on.
+5. Access the API documentation at `http://<your-home-assistant-ip>:<addon-port>/docs`.
+
 ## Environment variables
 
 | Environment Variable     | Required | Printer Type | Default | Description                                                                                                    |
