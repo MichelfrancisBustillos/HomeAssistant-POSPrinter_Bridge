@@ -1,8 +1,6 @@
 # POS Printer Bridge
 
-[![License][license-shield]](.github/LICENSE)
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
+![GitHub License](https://img.shields.io/github/license/michelfrancisbustillos/HomeAssistant-POSPrinter_Bridge)
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/michelfran7)
 
