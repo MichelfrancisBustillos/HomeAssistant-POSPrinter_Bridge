@@ -1,5 +1,11 @@
 # POS Printer Bridge
 
+[![License][license-shield]](.github/LICENSE)
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/michelfran7)
+
 A small Python HTTP API to send text, QR codes, barcodes, and images to an ESC/POS-compatible receipt printer on the network.
 
 This project exposes a minimal FastAPI service with endpoints for printing plain text and QR codes. It uses `python-escpos` (the `escpos` package) to communicate with network printers.
