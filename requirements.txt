@@ -1,0 +1,6 @@
+escpos
+fastapi
+pydantic
+dotenv
+uvicorn
+python-multipart

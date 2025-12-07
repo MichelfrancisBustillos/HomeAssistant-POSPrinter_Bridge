@@ -1,0 +1,60 @@
+name: POS Printer Bridge
+version: v0.0.4
+slug: pos_printer_bridge
+description: API Bridge for ESC/POS Receipt Printers
+url: https://github.com/MichelfrancisBustillos/POS_Printer_Bridge/tree/HomeAssistant
+init: false
+webui: http://[HOST]:[PORT:8000]/docs
+host_network: true
+usb: true
+watchdog: tcp://[HOST]:[PORT:8000]
+legacy: true
+ports:
+  8000/tcp: 8000
+arch:
+  - aarch64
+  - amd64
+options:
+  LOG_LEVEL: info
+  PRINTER_TYPE: dummy
+  PRINTER_IP: null
+  PRINTER_USB_INTERFACE: 0
+  PRINTER_SERIAL_BAUDRATE: 9600
+  PRINTER_SERIAL_BYTESIZE: 8
+  PRINTER_SERIAL_PARITY: "N"
+  PRINTER_SERIAL_STOPBITS: 1
+  PRINTER_SERIAL_TIMEOUT: 1
+  PRINTER_SERIAL_DSRDTR: True
+  PRINTER_ALIGNMENT: "left"
+  PRINTER_FONT: "a"
+  PRINTER_BOLD: False
+  PRINTER_UNDERLINE: "0"
+  PRINTER_DOUBLE_HEIGHT: False
+  PRINTER_DOUBLE_WIDTH: False
+  PRINTER_INVERSE: False
+  PRINTER_FLIP: False
+
+schema:
+  LOG_LEVEL: list(trace|debug|info|notice|warning|error|fatal)
+  PRINTER_TYPE: list(dummy|network|usb|serial)
+  PRINTER_IP: str?
+  PRINTER_USB_VENDOR_ID: str?
+  PRINTER_USB_PRODUCT_ID: str?
+  PRITNER_USB_INTERFACE: int?
+  PRINTER_USB_ENDPOINT_OUT: str?
+  PRINTER_USB_ENDPOINT_IN: str?
+  PRINTER_SERIAL_PORT: str?
+  PRINTER_SERIAL_BAUDRATE: int?
+  PRINTER_SERIAL_BYTESIZE: int?
+  PRINTER_SERIAL_PARITY: list(N|E|O)?
+  PRINTER_SERIAL_STOPBITS: int?
+  PRINTER_SERIAL_TIMEOUT: int?
+  PRINTER_SERIAL_DSRDTR: bool?
+  PRINTER_ALIGNMENT: list(left|center|right)?
+  PRINTER_FONT: list(a|b)?
+  PRINTER_BOLD: bool?
+  PRINTER_UNDERLINE: list(0|1|2)?
+  PRINTER_DOUBLE_HEIGHT: bool?
+  PRINTER_DOUBLE_WIDTH: bool?
+  PRINTER_INVERSE: bool?
+  PRINTER_FLIP: bool?
