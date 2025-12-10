@@ -64,7 +64,16 @@ def check_printer_initialized() -> bool:
         PRINTER.is_online()
         logging.info("Printer is online")
         return True
-    except NotImplementedError:
+    except Exception as e:
+        logging.error("Printer check error: %s", str(e))
+        try:
+            logging.info("Attempting to re-initialize printer")
+            init_printer()
+            PRINTER.is_online()
+            logging.info("Printer initialized and online after re-initialization")
+            return True
+        except Exception as init_err:
+            logging.error("Printer initialization/check failed: %s", str(init_err))
         logging.warning("Printer is offline")
         return False
 
